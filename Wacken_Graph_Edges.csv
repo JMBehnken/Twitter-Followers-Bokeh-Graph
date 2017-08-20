@@ -1,0 +1,9 @@
+Source,Target,Weight
+Amorphis,Epica,0.045079999999998836
+Amorphis,Sepultura,4e-05
+Amorphis,Belphegor,4e-05
+Belphegor,Amorphis,0.05
+Doro,Sepultura,0.0016638935108153079
+Epica,Amorphis,0.045079999999998836
+Sepultura,Amorphis,0.0056179775280898875
+Sepultura,Doro,0.0056179775280898875
