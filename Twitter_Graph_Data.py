@@ -1,14 +1,15 @@
+from collections import Counter
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
 import tweepy
+import sys
 
-festival = 'Wacken' # 'Hurricane' | 'Wacken'
+festival = sys.argv[1]
+max_followers_loaded = int(sys.argv[2])
 
 csv_edges_path = 'build/{}_Graph_Edges.csv'.format(festival)
 csv_nodes_path = 'build/{}_Graph_Nodes.csv'.format(festival)
-
-max_followers_loaded = 5000
 
 twitter_auth = 'twitter_auth.csv'
 
@@ -104,40 +105,15 @@ def getTwitterFollowers():
 
 
 def getMultipleFollowers():
-    id_dict = {}
-    for key in follower_dict.keys():
-        for id in follower_dict[key]:
-            if id in id_dict.keys():
-                id_dict[id] += 1
-            else:
-                id_dict[id] = 1
-
-    id_mix = []
-    for item in id_dict.items():
-        if item[1]>1:
-            id_mix.append(item[0])
+    keys, values = zip(*follower_dict.items())
+    id_dict = Counter([item for sublist in values for item in sublist])
+    id_mix = [item[0] for item in id_dict.items() if item[1]>1]
     return id_mix
 
 
 def getDirectedEdges():
-    edges = {}
-    for key_1 in follower_dict.keys():
-        follower_count = len(follower_dict[key_1])
-        for id_1 in follower_dict[key_1]:
-            if id_1 in id_mix:
-                for key_2 in follower_dict.keys():
-                    if key_1 != key_2:
-                        if id_1 in follower_dict[key_2]:
-                            edge = key_1+'::'+key_2
-                            if edge in edges.keys():
-                                edges[edge] += 1/follower_count
-                            else:
-                                edges[edge] = 1/follower_count
-
-    directed_edges = []
-    for item in edges.items():
-        nodes = item[0].split('::')
-        directed_edges.append([nodes[0].replace(' ', '_'), nodes[1].replace(' ', '_'), item[1]])
+    edges = {key_1+'::'+key_2:len(set(follower_dict[key_2]).intersection(set(follower_dict[key_1]).intersection(id_mix)))/len(follower_dict[key_1]) for key_1 in follower_dict.keys() for key_2 in follower_dict.keys() if key_1 != key_2}
+    directed_edges = [[item[0].split('::')[0].replace(' ', '_'), item[0].split('::')[1].replace(' ', '_'), item[1]] for item in edges.items() if item[0]>0]
     return directed_edges
 
 

@@ -2,15 +2,16 @@ from bokeh.plotting import figure, output_file, show
 from bokeh.models import HoverTool
 from bs4 import BeautifulSoup
 import pandas as pd
+import sys
 import re
 
-festival = 'Wacken'
+festival = sys.argv[1]
 
 gephi_svg_path = 'build/{}.svg'.format(festival)
 bokeh_html_path = 'build/{}.html'.format(festival)
 
-title = '{}-Bands 2018 and their shared Twitter-Followers'.format(festival)
-legend_text = "Linewidth 1% - 39%"
+title = '{}-Bands {} and their shared Twitter-Followers'.format(festival, sys.argv[2])
+legend_text = "Linewidth {}% - {}%".format(sys.argv[3], sys.argv[4])
 
 
 with open(gephi_svg_path) as f:
@@ -33,8 +34,8 @@ def lighten_hex(color, factor=0.9):
     return rgb_to_hex(*rgb)
 
 
-height = 600#int(float(bs.find('svg')['height']))
-width = 800#int(float(bs.find('svg')['width']))
+height = sorted([400, int(float(bs.find('svg')['height'])), 600])[1]
+width = sorted([600, int(float(bs.find('svg')['width'])), 1200])[1]
 
 edges = []
 for path in bs.findAll('path'):
@@ -84,7 +85,7 @@ from bokeh.models import ColumnDataSource, Circle, HoverTool, CustomJS, Bezier, 
 output_file(bokeh_html_path)
 
 # Basic plot setup
-p = figure(width=width, height=height, tools="pan,wheel_zoom,save,reset", toolbar_location='above', title=title, active_scroll='wheel_zoom', active_drag='pan')
+p = figure(width=width, height=height, tools="pan,wheel_zoom,save,reset", toolbar_location='left', title=title, active_scroll='wheel_zoom', active_drag='pan')
 p.axis.visible = False
 
 # Add a circle, that is visible only when selected
