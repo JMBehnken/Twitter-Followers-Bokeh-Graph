@@ -3,11 +3,12 @@ import pandas as pd
 import requests
 import tweepy
 
+festival = 'Wacken' # 'Hurricane' | 'Wacken'
 
-csv_edges_path = 'Wacken_Graph_Edges.csv'
-csv_nodes_path = 'Wacken_Graph_Nodes.csv'
+csv_edges_path = 'build/{}_Graph_Edges.csv'.format(festival)
+csv_nodes_path = 'build/{}_Graph_Nodes.csv'.format(festival)
 
-max_followers_loaded = 25000
+max_followers_loaded = 5000
 
 twitter_auth = 'twitter_auth.csv'
 
@@ -20,19 +21,25 @@ atoken = auth_keys[2]
 asecret = auth_keys[3]
 
 
-def getWackenBands():
-    url = 'http://www.wacken.com/de/bands/bands-billing/'
-    html = requests.get(url).text
+def getNames():
+    url = {'Hurricane':'http://www.hurricane.de/', 'Wacken':'http://www.wacken.com/de/bands/bands-billing/'}
+    html = requests.get(url[festival]).text
     bs = BeautifulSoup(html, 'lxml')
-    
-    band_names = []
-    for elem in bs.findAll('div', {'class':'col-sm-20'}):
-        for link in elem.findAll('a'):
-            band = link.get_text()
-            if band!='':
-                band_names.append(band)
 
-    return band_names
+    band_names = []
+    if festival=='Hurricane':
+        for elem in bs.findAll('div', {'class':'ABSATZ_LINEUP'}):
+            for link in elem.findAll('a'):
+                band = link.get_text().replace('\xa0', ' ')
+                if band!='':
+                    band_names.append(band)
+    if festival=='Wacken':
+        for elem in bs.findAll('div', {'class':'col-sm-20'}):
+            for link in elem.findAll('a'):
+                band = link.get_text()
+                if band!='':
+                    band_names.append(band)
+    return set(band_names)
 
 
 def getTwitterAccounts():
@@ -45,20 +52,19 @@ def getTwitterAccounts():
 
         for elem in bs.findAll('span', {'class':'ProfileCard-screenname'})[:1]:
             twitter_band_names.append([band, elem.span.get_text()[1:]])
-
     return twitter_band_names
 
 
 def getTwitterData():
     band_values = []
-    translate_dict = {'Tweets':1, 'Folge ich':2, 'Follower':3, '„Gefällt mir“':4}
-    
+    translate_dict = {'Tweets':2, 'Folge ich':3, 'Follower':4, '„Gefällt mir“':5}
+
     for band, twitter_band in twitter_band_names:
         twitter_url = 'https://twitter.com/{}?lang=de'.format(twitter_band)
-    
+
         html = requests.get(twitter_url).text
         bs = BeautifulSoup(html, 'lxml')
-    
+
         values = []
         for value in bs.find('ul', {'class':'ProfileNav-list'}).findAll('li'):
             try:
@@ -66,33 +72,34 @@ def getTwitterData():
                 values.append(x.split(' ', 1))
             except:
                 pass
-            
-        twitter_data = [band, 0, 0, 0, 0]
+
+        twitter_data = [band.replace(' ', '_'), twitter_band, 0, 0, 0, 0]
         for value, name in values[:4]:
-            twitter_data[translate_dict[name.split('-', 1)[0]]] = int(value.replace('.', ''))
-    
+            try:
+                twitter_data[translate_dict[name.split('-', 1)[0]]] = int(value.replace('.', ''))
+            except:
+                pass
+
         band_values.append(twitter_data)
-        
-    df_twitter_data = pd.DataFrame(band_values, columns=['Id', 'Tweets', 'Following', 'Follower', 'Likes'])
+
+    df_twitter_data = pd.DataFrame(band_values, columns=['Id', 'Account', 'Tweets', 'Following', 'Follower', 'Likes'])
     df_twitter_data.to_csv(csv_nodes_path, index=False)
-    
     return df_twitter_data
 
 
 def getTwitterFollowers():
     follower_dict = {}
-    for band in df_twitter_data['Id'].values:
+    for band, account in df_twitter_data[['Id', 'Account']].values:
         ids = []
         try:
-            for page in tweepy.Cursor(api.followers_ids, screen_name=band).pages():
+            for page in tweepy.Cursor(api.followers_ids, screen_name=account).pages():
                 ids.extend(page)
                 if len(ids)>=max_followers_loaded:
                     break
-            follower_dict[band] = ids
-            print(band)
+            print(band, len(ids))
         except:
-            print('Fehler: {}'.format(band))
-
+            print('Fehler: {}'.format(band), len(ids))
+        follower_dict[band] = ids
     return follower_dict
 
 
@@ -109,7 +116,6 @@ def getMultipleFollowers():
     for item in id_dict.items():
         if item[1]>1:
             id_mix.append(item[0])
-
     return id_mix
 
 
@@ -131,12 +137,21 @@ def getDirectedEdges():
     directed_edges = []
     for item in edges.items():
         nodes = item[0].split('::')
-        directed_edges.append([nodes[0], nodes[1], item[1]])
-
+        directed_edges.append([nodes[0].replace(' ', '_'), nodes[1].replace(' ', '_'), item[1]])
     return directed_edges
 
 
-band_names = getWackenBands()
+def addIdcount():
+    id_count = [[key, len(ids)]for key, ids in follower_dict.items()]
+    df_id_count = pd.DataFrame(id_count, columns=['Id', '#Follower_Used'])
+
+    df_nodes = pd.read_csv(csv_nodes_path)
+    
+    df_combined = df_nodes.merge(df_id_count, on='Id', how='left').fillna(0)
+    df_combined.to_csv(csv_nodes_path, index=False)
+
+
+band_names = getNames()
 twitter_band_names = getTwitterAccounts()
 df_twitter_data = getTwitterData()
 
@@ -147,6 +162,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 
 follower_dict = getTwitterFollowers()
+addIdcount()
 id_mix = getMultipleFollowers()
 directed_edges = getDirectedEdges()
 

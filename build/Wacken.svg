@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg contentScriptType="text/ecmascript" width="199.0"
+     xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
+     contentStyleType="text/css"
+     viewBox="-82.000000 -118.000000 199.000000 242.000000" height="242.0"
+     preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"
+     version="1.1">
+    <g id="edges">
+        <path fill="none" stroke-width="4.642481"
+              d="M -71.868111,-12.873525 C -61.635963,-19.013107 -37.078373,-12.874255 -30.938791,-2.642107"
+              class="Watain Belphegor" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.36366245"
+              d="M -71.868111,-12.873525 C -67.798538,-39.376343 -21.939949,-73.026192 4.562866,-68.956619"
+              class="Watain Epica" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.36366245"
+              d="M -71.868111,-12.873525 C -77.091370,-45.578354 -35.869003,-102.470482 -3.164175,-107.693741"
+              class="Watain Arch_Enemy" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.8390867"
+              d="M -71.868111,-12.873525 C -72.459679,-29.419271 -48.528419,-55.125244 -31.982674,-55.716816"
+              class="Watain Nightwish" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="1.4729857"
+              d="M -71.868111,-12.873525 C -50.512791,-25.912140 1.078104,-13.437086 14.116719,7.918231"
+              class="Watain Amorphis" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.9975615"
+              d="M -71.868111,-12.873525 C -41.785114,-13.041322 3.591070,31.831474 3.758867,61.914471"
+              class="Watain Doro" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.20518771"
+              d="M -71.868111,-12.873525 C -52.299198,-41.467300 19.944841,-55.004601 48.538620,-35.435684"
+              class="Watain Sepultura" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.20518771"
+              d="M -71.868111,-12.873525 C -49.996071,-3.377631 -31.431850,43.674263 -40.927746,65.546303"
+              class="Watain Firewind" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.3710157"
+              d="M -30.938791,-2.642107 C -46.394196,-29.207359 -29.729427,-92.238335 -3.164175,-107.693741"
+              class="Belphegor Arch_Enemy" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="3.4664714"
+              d="M -30.938791,-2.642107 C -19.815620,-9.541142 7.217685,-3.204940 14.116719,7.918231"
+              class="Belphegor Amorphis" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.61848986"
+              d="M -30.938791,-2.642107 C -11.087944,3.329677 9.730651,42.063622 3.758867,61.914471"
+              class="Belphegor Doro" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.6590594"
+              d="M -30.938791,-2.642107 C -37.101364,-23.005341 -15.800367,-62.794048 4.562866,-68.956619"
+              class="Belphegor Epica" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.72397065"
+              d="M -30.938791,-2.642107 C -41.762508,-13.048273 -42.388840,-44.893097 -31.982674,-55.716816"
+              class="Belphegor Nightwish" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.7969958"
+              d="M -30.938791,-2.642107 C -21.602024,-25.096306 26.084423,-44.772449 48.538620,-35.435684"
+              class="Belphegor Sepultura" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.4764965"
+              d="M -30.938791,-2.642107 C -19.298901,12.993364 -25.292274,53.906414 -40.927746,65.546303"
+              class="Belphegor Firewind" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.009946802"
+              d="M -30.938791,-2.642107 C -41.170940,3.497474 -65.728531,-2.641377 -71.868111,-12.873525"
+              class="Belphegor Watain" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="2.2574992"
+              d="M 4.562866,-68.956619 C -4.729967,-75.158630 -9.366191,-98.400909 -3.164175,-107.693741"
+              class="Epica Arch_Enemy" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="0.59009117"
+              d="M 4.562866,-68.956619 C 21.848606,-55.492420 27.580917,-9.367509 14.116719,7.918231"
+              class="Epica Amorphis" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="5.0"
+              d="M 4.562866,-68.956619 C -0.098281,-58.999546 -22.025604,-51.055668 -31.982674,-55.716816"
+              class="Epica Nightwish" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="1.3771403"
+              d="M 4.562866,-68.956619 C 20.062204,-71.047585 46.447655,-50.935020 48.538620,-35.435684"
+              class="Epica Sepultura" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="0.078915015"
+              d="M 4.562866,-68.956619 C 30.576286,-42.621601 30.093885,35.901051 3.758867,61.914471"
+              class="Epica Doro" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.6590594"
+              d="M 4.562866,-68.956619 C 10.725439,-48.593388 -10.575558,-8.804680 -30.938791,-2.642107"
+              class="Epica Belphegor" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.03834548"
+              d="M 4.562866,-68.956619 C 22.365330,-32.957909 -4.929035,47.743835 -40.927746,65.546303"
+              class="Epica Firewind" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="1.8147247"
+              d="M 30.625134,36.569862 C 10.469953,41.040253 -26.468403,17.513073 -30.938791,-2.642107"
+              class="Deserted_Fear Belphegor" stroke-opacity="1.0"
+              stroke="#ee7993"/>
+        <path fill="none" stroke-width="1.8147247"
+              d="M 30.625134,36.569862 C 21.593124,34.141216 11.688075,16.950241 14.116719,7.918231"
+              class="Deserted_Fear Amorphis" stroke-opacity="1.0"
+              stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.45485184"
+              d="M 30.625134,36.569862 C 19.806723,18.586056 30.554811,-24.617271 48.538620,-35.435684"
+              class="Deserted_Fear Sepultura" stroke-opacity="1.0"
+              stroke="#969588"/>
+        <path fill="none" stroke-width="0.0015609192"
+              d="M 30.625134,36.569862 C -4.985451,14.475001 -25.259035,-72.083160 -3.164175,-107.693741"
+              class="Deserted_Fear Arch_Enemy" stroke-opacity="1.0"
+              stroke="#969588"/>
+        <path fill="none" stroke-width="0.5681746"
+              d="M 30.625134,36.569862 C 57.017845,32.755199 102.328903,66.622284 106.143562,93.014992"
+              class="Deserted_Fear Knorkator" stroke-opacity="1.0"
+              stroke="#ee7993"/>
+        <path fill="none" stroke-width="1.1347883"
+              d="M 30.625134,36.569862 C 30.320803,47.012035 14.201042,62.218803 3.758867,61.914471"
+              class="Deserted_Fear Doro" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="1.8147247"
+              d="M 30.625134,36.569862 C 22.109846,56.675728 -20.821882,74.061592 -40.927746,65.546303"
+              class="Deserted_Fear Firewind" stroke-opacity="1.0"
+              stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.59009117"
+              d="M 14.116719,7.918231 C -3.169021,-5.545968 -8.901333,-51.670879 4.562866,-68.956619"
+              class="Amorphis Epica" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.18439582"
+              d="M 14.116719,7.918231 C -12.461854,-11.747985 -22.830391,-81.115173 -3.164175,-107.693741"
+              class="Amorphis Arch_Enemy" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="1.048527"
+              d="M 14.116719,7.918231 C -7.830169,4.411099 -35.489803,-33.769928 -31.982674,-55.716816"
+              class="Amorphis Nightwish" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="3.4664714"
+              d="M 14.116719,7.918231 C 2.993549,14.817266 -24.039757,8.481063 -30.938791,-2.642107"
+              class="Amorphis Belphegor" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.97955877"
+              d="M 14.116719,7.918231 C 22.844397,20.789051 16.629684,53.186794 3.758867,61.914471"
+              class="Amorphis Doro" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.5373508"
+              d="M 14.116719,7.918231 C 12.330316,-7.636932 32.983456,-33.649281 48.538620,-35.435684"
+              class="Amorphis Sepultura" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.75236934"
+              d="M 14.116719,7.918231 C 14.633440,30.452736 -18.393240,65.029587 -40.927746,65.546303"
+              class="Amorphis Firewind" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.61848986"
+              d="M 3.758867,61.914471 C -16.091982,55.942688 -36.910576,17.208740 -30.938791,-2.642107"
+              class="Doro Belphegor" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.97955877"
+              d="M 3.758867,61.914471 C -4.968810,49.043652 1.245901,16.645908 14.116719,7.918231"
+              class="Doro Amorphis" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.2209084"
+              d="M 3.758867,61.914471 C -6.755215,33.488483 20.112635,-24.921602 48.538620,-35.435684"
+              class="Doro Sepultura" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.078915015"
+              d="M 3.758867,61.914471 C -22.254553,35.579449 -21.772152,-42.943203 4.562866,-68.956619"
+              class="Doro Epica" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.19656667"
+              d="M 3.758867,61.914471 C -26.915697,45.536522 -48.360622,-25.042252 -31.982674,-55.716816"
+              class="Doro Nightwish" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="1.2108052"
+              d="M 3.758867,61.914471 C -4.452089,71.578163 -31.264057,73.757263 -40.927746,65.546303"
+              class="Doro Firewind" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="1.3771403"
+              d="M 48.538620,-35.435684 C 33.039284,-33.344719 6.653830,-53.457283 4.562866,-68.956619"
+              class="Sepultura Epica" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="0.36290178"
+              d="M 48.538620,-35.435684 C 23.746447,-39.546738 -7.275228,-82.901566 -3.164175,-107.693741"
+              class="Sepultura Arch_Enemy" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="0.7969958"
+              d="M 48.538620,-35.435684 C 39.201855,-12.981486 -8.484594,6.694659 -30.938791,-2.642107"
+              class="Sepultura Belphegor" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.5373508"
+              d="M 48.538620,-35.435684 C 50.325024,-19.880520 29.671883,6.131828 14.116719,7.918231"
+              class="Sepultura Amorphis" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.49678126"
+              d="M 48.538620,-35.435684 C 28.378138,-23.387651 -19.934643,-35.556335 -31.982674,-55.716816"
+              class="Sepultura Nightwish" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="0.2209084"
+              d="M 48.538620,-35.435684 C 59.052704,-7.009699 32.184853,51.400387 3.758867,61.914471"
+              class="Sepultura Doro" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.111370645"
+              d="M 48.538620,-35.435684 C 50.841743,2.653988 -2.838074,63.243179 -40.927746,65.546303"
+              class="Sepultura Firewind" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.0"
+              d="M 106.143562,93.014992 C 68.932434,78.845840 34.369469,1.775442 48.538620,-35.435684"
+              class="Knorkator Sepultura" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.01862697"
+              d="M 106.143562,93.014992 C 59.595669,101.300049 -22.653740,43.905785 -30.938791,-2.642107"
+              class="Knorkator Belphegor" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.09313484"
+              d="M 106.143562,93.014992 C 101.878487,105.527565 76.712021,117.898811 64.199448,113.633736"
+              class="Knorkator In_Extremo" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.13038878"
+              d="M 106.143562,93.014992 C 70.718834,94.401001 15.502733,43.342953 14.116719,7.918231"
+              class="Knorkator Amorphis" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.0"
+              d="M 106.143562,93.014992 C 79.750854,96.829651 34.439796,62.962574 30.625134,36.569862"
+              class="Knorkator Deserted_Fear" stroke-opacity="1.0"
+              stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.22352363"
+              d="M 106.143562,93.014992 C 79.446518,107.271835 18.015703,88.611511 3.758867,61.914471"
+              class="Knorkator Doro" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.01862697"
+              d="M 106.143562,93.014992 C 71.235565,116.935516 -17.007223,100.454300 -40.927746,65.546303"
+              class="Knorkator Firewind" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.4764965"
+              d="M -40.927746,65.546303 C -52.567635,49.910831 -46.574261,8.997782 -30.938791,-2.642107"
+              class="Firewind Belphegor" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.111370645"
+              d="M -40.927746,65.546303 C -43.230869,27.456633 10.448948,-33.132561 48.538620,-35.435684"
+              class="Firewind Sepultura" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.1154276"
+              d="M -40.927746,65.546303 C -63.391357,39.504665 -58.024311,-33.253204 -31.982674,-55.716816"
+              class="Firewind Nightwish" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.03834548"
+              d="M -40.927746,65.546303 C -58.730209,29.547590 -31.435844,-51.154152 4.562866,-68.956619"
+              class="Firewind Epica" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.75236934"
+              d="M -40.927746,65.546303 C -41.444466,43.011799 -8.417788,8.434951 14.116719,7.918231"
+              class="Firewind Amorphis" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="1.2108052"
+              d="M -40.927746,65.546303 C -32.716789,55.882614 -5.904822,53.703514 3.758867,61.914471"
+              class="Firewind Doro" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="2.2574992"
+              d="M -3.164175,-107.693741 C 6.128658,-101.491730 10.764883,-78.249451 4.562866,-68.956619"
+              class="Arch_Enemy Epica" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="0.18439582"
+              d="M -3.164175,-107.693741 C 23.414398,-88.027527 33.782936,-18.660343 14.116719,7.918231"
+              class="Arch_Enemy Amorphis" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.61848986"
+              d="M -3.164175,-107.693741 C 1.467510,-91.534653 -15.823590,-60.348499 -31.982674,-55.716816"
+              class="Arch_Enemy Nightwish" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="0.36290178"
+              d="M -3.164175,-107.693741 C 21.627998,-103.582687 52.649673,-60.227859 48.538620,-35.435684"
+              class="Arch_Enemy Sepultura" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="0.3710157"
+              d="M -3.164175,-107.693741 C 12.291230,-81.128487 -4.373541,-18.097511 -30.938791,-2.642107"
+              class="Arch_Enemy Belphegor" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.014230542"
+              d="M 64.199448,113.633736 C 15.754055,89.042976 -20.027889,-20.511227 4.562866,-68.956619"
+              class="In_Extremo Epica" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.5811961"
+              d="M 64.199448,113.633736 C 41.767479,115.378006 5.503130,84.346436 3.758867,61.914471"
+              class="In_Extremo Doro" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.5811961"
+              d="M 64.199448,113.633736 C 68.464523,101.121162 93.630989,88.749916 106.143562,93.014992"
+              class="In_Extremo Knorkator" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="0.3922076"
+              d="M 64.199448,113.633736 C 33.039803,102.507179 2.990162,39.077877 14.116719,7.918231"
+              class="In_Extremo Amorphis" stroke-opacity="1.0" stroke="#ee7993"/>
+        <path fill="none" stroke-width="5.0"
+              d="M -31.982674,-55.716816 C -27.321526,-65.673882 -5.394202,-73.617760 4.562866,-68.956619"
+              class="Nightwish Epica" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="1.048527"
+              d="M -31.982674,-55.716816 C -10.035785,-52.209686 17.623852,-14.028657 14.116719,7.918231"
+              class="Nightwish Amorphis" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.61848986"
+              d="M -31.982674,-55.716816 C -36.614361,-71.875900 -19.323259,-103.062057 -3.164175,-107.693741"
+              class="Nightwish Arch_Enemy" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="0.72397065"
+              d="M -31.982674,-55.716816 C -21.158955,-45.310654 -20.532627,-13.465826 -30.938791,-2.642107"
+              class="Nightwish Belphegor" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.19656667"
+              d="M -31.982674,-55.716816 C -1.308109,-39.338867 20.136816,31.239906 3.758867,61.914471"
+              class="Nightwish Doro" stroke-opacity="1.0" stroke="#969588"/>
+        <path fill="none" stroke-width="0.49678126"
+              d="M -31.982674,-55.716816 C -11.822189,-67.764847 36.490589,-55.596169 48.538620,-35.435684"
+              class="Nightwish Sepultura" stroke-opacity="1.0" stroke="#3fb17d"/>
+        <path fill="none" stroke-width="0.1154276"
+              d="M -31.982674,-55.716816 C -9.519062,-29.675177 -14.886108,43.082691 -40.927746,65.546303"
+              class="Nightwish Firewind" stroke-opacity="1.0" stroke="#969588"/>
+    </g>
+    <g id="nodes">
+        <circle fill-opacity="1.0" fill="#ee7993" r="10.0" cx="-71.86811"
+                class="Watain" cy="-12.873525" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ee7993" r="10.0" cx="-30.938791"
+                class="Belphegor" cy="-2.6421075" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#3fb17d" r="10.0" cx="4.562866"
+                class="Epica" cy="-68.95662" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ee7993" r="10.0" cx="30.625134"
+                class="Deserted_Fear" cy="36.569862" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ee7993" r="10.0" cx="14.116719"
+                class="Amorphis" cy="7.918231" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ee7993" r="10.0" cx="3.758867"
+                class="Doro" cy="61.91447" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#3fb17d" r="10.0" cx="48.53862"
+                class="Sepultura" cy="-35.435684" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ee7993" r="10.0" cx="106.14356"
+                class="Knorkator" cy="93.01499" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ee7993" r="10.0" cx="-40.927746"
+                class="Firewind" cy="65.5463" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#3fb17d" r="10.0" cx="-3.1641748"
+                class="Arch_Enemy" cy="-107.69374" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ee7993" r="10.0" cx="64.19945"
+                class="In_Extremo" cy="113.633736" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#3fb17d" r="10.0" cx="-31.982674"
+                class="Nightwish" cy="-55.716816" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+    </g>
+    <g id="node-labels">
+        <text font-size="8" x="-71.86811" y="-11.325348" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Watain">
+            Watain
+        </text>
+        <text font-size="8" x="-30.938791" y="-0.7065605" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Belphegor">
+            Belphegor
+        </text>
+        <text font-size="8" x="4.562866" y="-67.02107" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Epica">
+            Epica
+        </text>
+        <text font-size="8" x="30.625134" y="38.561398" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Deserted_Fear">
+            Deserted_Fear
+        </text>
+        <text font-size="8" x="14.116719" y="9.853778" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Amorphis">
+            Amorphis
+        </text>
+        <text font-size="8" x="3.758867" y="63.40145" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Doro">
+            Doro
+        </text>
+        <text font-size="8" x="48.53862" y="-33.500137" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Sepultura">
+            Sepultura
+        </text>
+        <text font-size="8" x="106.14356" y="94.56317" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Knorkator">
+            Knorkator
+        </text>
+        <text font-size="8" x="-40.927746" y="67.09448" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Firewind">
+            Firewind
+        </text>
+        <text font-size="8" x="-3.1641748" y="-105.7022" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Arch_Enemy">
+            Arch_Enemy
+        </text>
+        <text font-size="8" x="64.19945" y="115.56407" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="In_Extremo">
+            In_Extremo
+        </text>
+        <text font-size="8" x="-31.982674" y="-53.78127" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Nightwish">
+            Nightwish
+        </text>
+    </g>
+</svg>

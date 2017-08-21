@@ -4,18 +4,19 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import re
 
+festival = 'Wacken'
 
-gephi_svg_path = 'Wacken.svg'
-bokeh_html_path = 'Wacken.html'
+gephi_svg_path = 'build/{}.svg'.format(festival)
+bokeh_html_path = 'build/{}.html'.format(festival)
 
-title = 'Wacken-Bands 2018 and their shared Twitter-Followers'
-legend_text = "Linewidth 0.5% - 5%"
+title = '{}-Bands 2018 and their shared Twitter-Followers'.format(festival)
+legend_text = "Linewidth 1% - 39%"
 
 
 with open(gephi_svg_path) as f:
     bs = BeautifulSoup(f.read(), 'lxml')
-    
-    
+
+
 def lighten_hex(color, factor=0.9):
     def hex_to_rgb(value):
         """Return (red, green, blue) for the color given as #rrggbb."""
@@ -26,29 +27,29 @@ def lighten_hex(color, factor=0.9):
     def rgb_to_hex(red, green, blue):
         """Return color as #rrggbb for the given color values."""
         return '#%02x%02x%02x' % (red, green, blue)
-    
+
     rgb = hex_to_rgb(color)
     rgb = [int((255-x)*factor+x) for x in rgb]
     return rgb_to_hex(*rgb)
 
 
-height = int(float(bs.find('svg')['height']))
-width = int(float(bs.find('svg')['width']))
+height = 600#int(float(bs.find('svg')['height']))
+width = 800#int(float(bs.find('svg')['width']))
 
 edges = []
 for path in bs.findAll('path'):
     x0, y0, cx0, cy0, cx1, cy1, x1, y1 = re.findall('-?\d+\.\d+',path['d'])
     edges.append({'source':path['class'][0], 'target':path['class'][1], 'x0':float(x0), 'y0':float(y0), 'x1':float(x1), 'y1':float(y1), 'cx0':float(cx0), 'cy0':float(cy0), 'cx1':float(cx1), 'cy1':float(cy1), 'fill':path['fill'], 'stroke':path['stroke'],'stroke_light':lighten_hex(path['stroke']), 'stroke-opacity':float(path['stroke-opacity']), 'stroke-width':float(path['stroke-width'])})
 df_edges = pd.DataFrame(edges)
-    
+
 nodes = []
 for circle in bs.findAll('circle'):
     nodes.append({'class':circle['class'][0], 'cx':float(circle['cx']), 'cy':float(circle['cy']), 'fill':circle['fill'], 'fill_light':lighten_hex(circle['fill']), 'fill-opacity':float(circle['fill-opacity']), 'r':float(circle['r']), 'stroke':circle['stroke'], 'stroke-opacity':circle['stroke-opacity'], 'stroke-width':circle['stroke-width']})
 df_nodes = pd.DataFrame(nodes)
-    
+
 node_labels = []
 for text in bs.findAll('text'):
-    node_labels.append({'class':text['class'][0], 'fill':text['fill'], 'font-family':text['font-family'], 'font-size':text['font-size'], 'style':text['style'], 'x':float(text['x']), 'y':float(text['y']), 'text':text.get_text().strip()})
+    node_labels.append({'class':text['class'][0], 'fill':text['fill'], 'font-family':text['font-family'], 'font-size':text['font-size'], 'style':text['style'], 'x':float(text['x']), 'y':float(text['y']), 'text':text.get_text().strip().replace('_', ' ')})
 df_node_labels = pd.DataFrame(node_labels)
 
 
@@ -62,19 +63,19 @@ for i, band in enumerate(df_nodes['class']):
     l_nodes.append(band)
     l_nodes = [node_dict[name] for name in list(node_dict.keys()) if name not in l_nodes]
     linked_nodes[i] = l_nodes
-    
+
 linked_edges = {}
 for band in df_edges['source'].unique():
     ind_band = node_dict[band]
     ind = df_edges[df_edges['source']!=band]['target'].index.tolist()
     linked_edges[ind_band] = ind
-    
-    
+
+
 n_x, n_y, n_fill, n_fill_light, n_r = (df_nodes['cx'], -df_nodes['cy'], df_nodes['fill'], df_nodes['fill_light'], df_nodes['r'])
 e_x0, e_y0, e_x1, e_y1, e_cx0, e_cy0, e_cx1, e_cy1, e_line_color, e_line_color_light, e_line_width, e_source, e_target = (df_edges['x0'], -df_edges['y0'], df_edges['x1'], -df_edges['y1'], df_edges['cx0'], -df_edges['cy0'], df_edges['cx1'], -df_edges['cy1'], df_edges['stroke'], df_edges['stroke_light'], 0.5+df_edges['stroke-width'], df_edges['source'], df_edges['target'])
 t_x, t_y, t_text, t_text_font_size = (df_node_labels['x'], -df_node_labels['y'], df_node_labels['text'], df_node_labels['font-size']+'pt')
 
-hover_alpha = 1.0 
+hover_alpha = 1.0
 no_hover_alpha = 1.0
 
 from bokeh.plotting import figure, output_file, show
@@ -177,3 +178,4 @@ legend = Legend(items=[(legend_text, [er])])
 p.add_layout(legend, 'below')
 
 show(p)
+df_edges.to_csv('build/edges.csv', index=False)
