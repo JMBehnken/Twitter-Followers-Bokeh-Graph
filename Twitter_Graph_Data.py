@@ -112,8 +112,8 @@ def getMultipleFollowers():
 
 
 def getDirectedEdges():
-    edges = {key_1+'::'+key_2:len(set(follower_dict[key_2]).intersection(set(follower_dict[key_1]).intersection(id_mix)))/len(follower_dict[key_1]) for key_1 in follower_dict.keys() for key_2 in follower_dict.keys() if key_1 != key_2}
-    directed_edges = [[item[0].split('::')[0].replace(' ', '_'), item[0].split('::')[1].replace(' ', '_'), item[1]] for item in edges.items() if item[0]>0]
+    edges = {key_1+'::'+key_2:len(set(follower_dict[key_2]).intersection(set(follower_dict[key_1]).intersection(id_mix)))/len(follower_dict[key_1]) for key_1 in follower_dict.keys() for key_2 in follower_dict.keys() if key_1 != key_2 and len(follower_dict[key_1])>0}
+    directed_edges = [[item[0].split('::')[0].replace(' ', '_'), item[0].split('::')[1].replace(' ', '_'), item[1]] for item in edges.items() if item[1]>0]
     return directed_edges
 
 
