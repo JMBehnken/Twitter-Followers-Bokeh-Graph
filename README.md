@@ -14,7 +14,7 @@ The code follows these steps:
 
 3. Scrape the basic Twitter-Data (Follower-Count, Tweet-Count, ...) for every band using their Twitter-Mainpage.
 
-4. Use the Twitter-API to receive the ids of their Followers.
+4. Use the Twitter-API to receive the ids of their Followers. (This will take a while, since the API restricts access)
 
 5. Compute the shared Followers between every node-pair and weighting the edge by the fraction of actually shared to maximal shared Followers.
 
