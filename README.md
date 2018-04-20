@@ -3,7 +3,7 @@
 The code in this repository creates an interactive html-file. With this file you can explore the relationships between Twitter-Accounts based on their shared Followers.
 
 Example:
-Using only bandnames from festivals the bands are clustering by their music-genre. 
+Using only bandnames from festivals, the bands are clustering by their music-genre. 
 
 
 The code follows these steps:

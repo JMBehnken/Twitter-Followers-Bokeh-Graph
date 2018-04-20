@@ -1,3 +1,4 @@
+#Import
 from collections import Counter
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -5,16 +6,20 @@ import requests
 import tweepy
 import sys
 
+#Festivalname Hurricane/Wacken
 festival = sys.argv[1]
+#Number of Followers to scrape
 max_followers_loaded = int(sys.argv[2])
 
+#Create Datafiles
 csv_edges_path = 'build/{}_Graph_Edges.csv'.format(festival)
 csv_nodes_path = 'build/{}_Graph_Nodes.csv'.format(festival)
 
+#Path to the Twitter-API-Authentication
 twitter_auth = 'twitter_auth.csv'
 
 
-
+#Authenticate
 auth_keys = pd.read_csv(twitter_auth, header=None)[0].tolist()
 ckey = auth_keys[0]
 csecret = auth_keys[1]
@@ -23,6 +28,7 @@ asecret = auth_keys[3]
 
 
 def getNames():
+    #Scrape the bands from the festival-websites
     url = {'Hurricane':'http://www.hurricane.de/', 'Wacken':'http://www.wacken.com/de/bands/bands-billing/'}
     html = requests.get(url[festival]).text
     bs = BeautifulSoup(html, 'lxml')
@@ -44,6 +50,7 @@ def getNames():
 
 
 def getTwitterAccounts():
+    #Get the most likely Twitter-Account for every band
     twitter_band_names = []
     for band in band_names:
         twitter_search_url = 'https://twitter.com/search?f=users&vertical=default&q={}&src=typd&lang=de'.format(band)
@@ -57,6 +64,7 @@ def getTwitterAccounts():
 
 
 def getTwitterData():
+    #Get the Twitter-Data for each account
     band_values = []
     translate_dict = {'Tweets':2, 'Folge ich':3, 'Follower':4, '„Gefällt mir“':5}
 
@@ -89,6 +97,7 @@ def getTwitterData():
 
 
 def getTwitterFollowers():
+    #Download the follower-ids to find users following multiple bands
     follower_dict = {}
     for band, account in df_twitter_data[['Id', 'Account']].values:
         ids = []
@@ -105,6 +114,7 @@ def getTwitterFollowers():
 
 
 def getMultipleFollowers():
+    #Compute multiple followers
     keys, values = zip(*follower_dict.items())
     id_dict = Counter([item for sublist in values for item in sublist])
     id_mix = [item[0] for item in id_dict.items() if item[1]>1]
@@ -112,12 +122,14 @@ def getMultipleFollowers():
 
 
 def getDirectedEdges():
+    #Compute the edges of the graph
     edges = {key_1+'::'+key_2:len(set(follower_dict[key_2]).intersection(set(follower_dict[key_1]).intersection(id_mix)))/len(follower_dict[key_1]) for key_1 in follower_dict.keys() for key_2 in follower_dict.keys() if key_1 != key_2 and len(follower_dict[key_1])>0}
     directed_edges = [[item[0].split('::')[0].replace(' ', '_'), item[0].split('::')[1].replace(' ', '_'), item[1]] for item in edges.items() if item[1]>0]
     return directed_edges
 
 
 def addIdcount():
+    #Store the scraped data
     id_count = [[key, len(ids)]for key, ids in follower_dict.items()]
     df_id_count = pd.DataFrame(id_count, columns=['Id', '#Follower_Used'])
 

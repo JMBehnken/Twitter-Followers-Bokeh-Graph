@@ -1,3 +1,4 @@
+#Import
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import HoverTool
 from bs4 import BeautifulSoup
@@ -5,6 +6,9 @@ import pandas as pd
 import sys
 import re
 
+#Input: python script.py Festivalname Number_of_max_Followers min_Linewidth max_linewidth
+
+#Festivalname Hurricane/Wacken
 festival = sys.argv[1]
 
 gephi_svg_path = 'build/{}.svg'.format(festival)
